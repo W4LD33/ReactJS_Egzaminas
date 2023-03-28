@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Flat from '../Flat/Flat';
+import './main.css'
 
 const fetchData = async () => {
     try {
@@ -20,11 +21,19 @@ function Main() {
     }, []);
 
     const places = flats.map((flat) => {
-        return <Flat key={flat.id} img={flat.imageUrl}/>
+        return <Flat 
+        key={flat.id} 
+        img={flat.imageUrl}
+        name={flat.name}
+        lat={flat.lat}
+        lon={flat.lng}
+        price={flat.price}
+        currency={flat.priceCurrency}
+        />
     })
 
     return (
-      <div> {places} </div>
+      <div className='flat-container'> {places} </div>
     )
 }
 
