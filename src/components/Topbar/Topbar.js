@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import './topbar.css';
 import { FaGlobe, FaUserCircle } from 'react-icons/fa';
 import { FiMenu, FiSearch } from 'react-icons/fi'
-import Menu from '../../Menu/Menu';
+import Menu from '../Menu/Menu';
 
 const Topbar = () => {  
     const [isMenuOpen, setIsMenuOpen] = useState(false);
